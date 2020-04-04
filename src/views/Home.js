@@ -6,7 +6,6 @@ class Home extends Component {
       <div className="view">
         <div className="App">
           <header className="App-header">
-            
             <img src="logo192.png" className="App-logo" alt="logo" />
           </header>
         </div>

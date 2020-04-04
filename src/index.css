@@ -143,6 +143,13 @@ nav a.active:before {
   width: 300px;
 }
 
+.App-map {
+  width: 18em;
+  margin-left: -56px;
+  margin-top: -25px;
+  max-height: 560px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -165,11 +172,13 @@ nav a.active:before {
 }
 
 .content {
+  filter: drop-shadow(0px 0px 25px #553185);
   border-radius: 40px;
-  background-color: white;
+  background-color: #101010;
   color: #101010;
   max-width: 17em;
   min-height: 38em;
+  max-height: 38em;
   margin: 0 auto;
   padding: 1em;
   text-align: left;

@@ -6,7 +6,7 @@ class About extends Component {
       <div className="view">
         <div className="content">
           <div className="content--inner">
-            <p className="content--excerpt">Teste</p>
+            <img src="mapa-inicial.png" className="App-map" alt="logo" />
           </div>
         </div>
       </div>
