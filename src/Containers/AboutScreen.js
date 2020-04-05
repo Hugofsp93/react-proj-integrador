@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Author extends Component {
+class About extends Component {
   render() {
     return (
       <div className="view">
         <div className="content">
           <div className="content--inner">
-            <img src="favoritos-vazio.png" className="App-map" alt="logo" />
+            <img src="images/mapa-inicial.png" className="App-map" alt="logo" />
           </div>
         </div>
       </div>
@@ -14,4 +14,4 @@ class Author extends Component {
   }
 }
 
-export default Author
+export default About
