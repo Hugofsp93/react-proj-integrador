@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Author extends Component {
+class Favorites extends Component {
   render() {
     return (
       <div className="view">
         <div className="content">
           <div className="content--inner">
-            <img src="images/favoritos-vazio.png" className="App-map" alt="logo" />
+            Tela de eventos
           </div>
         </div>
       </div>
@@ -14,4 +14,4 @@ class Author extends Component {
   }
 }
 
-export default Author
+export default Favorites

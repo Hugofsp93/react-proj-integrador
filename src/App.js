@@ -4,8 +4,7 @@ import { Transition, TransitionGroup } from 'react-transition-group';
 import { play, exit } from './Timelines'
 import Nav from './Navigation'
 import Home from './Containers/HomeScreen'
-import About from './Containers/AboutScreen'
-import Author from './Containers/AuthorScreen'
+import Favorites from './Containers/FavoritesScreen'
 
 class App extends Component {
 
@@ -30,8 +29,7 @@ class App extends Component {
             >
               <Switch location={location}>
                 <Route exact path="/" component={Home} />
-                <Route path="/author" component={Author} />
-                <Route path="/about" component={About} />
+                <Route path="/favorites" component={Favorites} />
               </Switch>
             </Transition>
           </TransitionGroup>
@@ -43,13 +41,13 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          {this.header()}
-          <section className="mainview">
+          {/* {this.header()} */}
+          <section className="app--main">
             {this.main()}
           </section>
-          <nav>
+          <div class="app--bottom-bar">
             <Nav />
-          </nav>
+          </div>
         </div>
       </BrowserRouter>
     )

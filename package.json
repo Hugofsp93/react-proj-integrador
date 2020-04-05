@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jeremenichelli.github.io/react-view-transition-example",
   "dependencies": {
+    "google-maps-react": "^2.0.2",
     "gsap": "^2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
