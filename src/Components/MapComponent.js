@@ -27,8 +27,6 @@ class MapComponent extends Component {
           }))
         }
       )
-    } else {
-      error => console.log(error)
     }
   }
 
