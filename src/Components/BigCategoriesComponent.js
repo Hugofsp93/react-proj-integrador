@@ -1,18 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class BigCategoriesComponent extends Component {
-  constructor(props) {
-    super(props)
-    this.setState({
-      color: '#000'
-    })
-  }
+export default function BigCategoriesComponent(props) {
 
-  render() {
-    return (
-      <div className='big-categories' style={{ background: this.props.color }}>
-        <p style={{ color: 'white' }}>{this.props.name}</p>
-      </div>
-    )
-  }
+  return (
+    <div className='big-categories' style={{ background: props.color }}>
+      <p style={{ color: 'white' }}>{props.name}</p>
+    </div>
+  )
 }

@@ -1,16 +1,15 @@
 {
-  "name": "react-view-transition-example",
-  "version": "0.1.0",
+  "name": "adorodoar",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://jeremenichelli.github.io/react-view-transition-example",
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "gsap": "^2.0.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "react-transition-group": "^2.4.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -22,5 +21,17 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,23 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import categories from '../db/categories.json'
+import categoriesDb from '../db/categories.json'
+import { useHistory, useParams } from "react-router-dom"
 
-class Instituion extends Component {
+export default function Institution() {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      categories: categories
-    }
-  }
+  let { id } = useParams();
 
-  render() {
-    return (
-      <div className="view">
-        <h2>Instituições</h2>
-      </div>
-    )
-  }
+  return (
+    <div className="view">
+      <h2>Instituições {id}</h2>
+    </div>
+  )
 }
-
-export default Home

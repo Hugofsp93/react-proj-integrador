@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Favorites extends Component {
-  render() {
-    return (
-      <div className="view">
-        <div className="content">
-          <div className="content--inner">
-            Tela de eventos
-          </div>
+export default function Favorites() {
+  return (
+    <div className="view">
+      <div className="content">
+        <div className="content--inner">
+          Tela de eventos
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default Favorites
+
