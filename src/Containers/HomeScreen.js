@@ -2,59 +2,13 @@ import React, { Component } from 'react';
 
 import Map from '../Components/MapComponent'
 import BigCategories from '../Components/BigCategoriesComponent'
-
+import categories from '../db/categories.json'
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      categories: [
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#1890FC'
-        },
-        {
-          name: "Dinheiro",
-          value: 'money',
-          color: '#D847F3'
-        },
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#C5FD39'
-        },
-        {
-          name: "Roupa",
-          value: 'higiene',
-          color: '#FEAA3A'
-        },
-        {
-          name: "Comida",
-          value: 'higiene',
-          color: '#990000'
-        },
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#990000'
-        },
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#990000'
-        },
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#990000'
-        },
-        {
-          name: "Higiene PEssoal",
-          value: 'higiene',
-          color: '#990000'
-        },
-      ]
+      categories: categories
     }
   }
 
