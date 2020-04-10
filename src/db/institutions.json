@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Teste",
+    "address": "Rua rua asdasd aksdaksd",
+    "description": "asdasdasd",
+    "phone": [
+      "92324234",
+      "234234"
+    ],
+    "location": {
+      "lat": 3232.21,
+      "lag": 34234.32
+    },
+    "photos": [
+      "http://photopea.com.br/231/213",
+      "http://photopea.com.br/231/213",
+      "http://photopea.com.br/231/213"
+    ],
+    "categories": [
+      "money",
+      ""
+    ],
+    "email": "teste@gmail.com"
+  }
+]
