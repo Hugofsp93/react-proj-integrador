@@ -40,7 +40,7 @@ h2 {
   height: 100vh;
   justify-content: flex-end;
   flex-flow: column nowrap;
-  background-color: #874CD4;
+  background-color: #FFF;
 }
 
 .app--main{
@@ -49,6 +49,7 @@ h2 {
 }
 
 .app--bottom-bar{
+  background-color: #874CD4;
   min-height: 100px;
 }
 
@@ -150,7 +151,6 @@ nav a.active:before {
 .card-primary{
   display: flex;
   width: 100%;
-
   padding: 1em 0.5em;
   color: #686868;
   align-items: center;
@@ -165,7 +165,6 @@ nav a.active:before {
 .card-primary:not(:first-child){
   border-top: 2px solid #ccc;
 }
-
 
 .card-primary figure{
   width: 20%;
@@ -212,6 +211,36 @@ nav a.active:before {
 
 .card-primary-text{
   flex: 1;
+}
+
+.header-content{
+  background-color: #9148DC;
+  height: 120px;
+  position: relative;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  z-index: 10;
+}
+
+.header-content::after{
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  background-color: #9148DC;
+  width: 100px;
+  height: 100px;
+  bottom: -40px;
+  z-index: -1;
+}
+
+.title-main{
+  color: #FFF;
+  font-size: 26px;
+  font-style: normal;
 }
 
 /* 

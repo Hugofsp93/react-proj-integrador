@@ -3,6 +3,15 @@ import institutions from '../db/institutions.json'
 
 export default function Favorites() {
 
+  const renderHeader = () => {
+    return (
+      <header className='header-content'>
+        <h1 className="title-main">Favoritos</h1>
+      </header>
+    )
+  }
+
+
   const renderInstitutions = () => {
     return (
       institutions.map((institution, key) => {
@@ -34,7 +43,10 @@ export default function Favorites() {
     <div className="view">
       <div className="content">
         <div className="content--inner">
-          {renderInstitutions()}
+          {renderHeader()}
+          <section class="content--institutions">
+            {renderInstitutions()}
+          </section>
         </div>
       </div>
     </div>
