@@ -1,10 +1,15 @@
 import React from 'react';
+import ButtonBack from '../Components/ButtonBackComponent'
 import institutions from '../db/institutions.json'
 import { FaHeart } from "react-icons/fa";
+import { useHistory } from "react-router-dom"
 
 export default function Favorites() {
 
+  let history = useHistory()
+
   const renderHeader = () => {
+
     return (
       <header className='header-content'>
         <div style={{ position: 'absolute' }}>
@@ -13,6 +18,7 @@ export default function Favorites() {
         <div className='favorite-icon'>
           <FaHeart />
         </div>
+        <ButtonBack onClick={() => history.push('/')} />
       </header>
     )
   }
