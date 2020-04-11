@@ -9,10 +9,9 @@ const routes = [
 export default function Nav() {
   const links = routes.map(({ to, label }) => {
     return <NavLink exact={true} to={to} key={to}>{label}</NavLink>
-  }
-  )
+  })
 
-  return <nav> {links}</nav >;
+  return <nav>{links}</nav >;
 }
 
 

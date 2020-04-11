@@ -1,12 +1,18 @@
 import React from 'react';
 import institutions from '../db/institutions.json'
+import { FaHeart } from "react-icons/fa";
 
 export default function Favorites() {
 
   const renderHeader = () => {
     return (
       <header className='header-content'>
-        <h1 className="title-main">Favoritos</h1>
+        <div style={{ position: 'absolute' }}>
+          <h1 className="title-main">Favoritos</h1>
+        </div>
+        <div className='favorite-icon'>
+          <FaHeart />
+        </div>
       </header>
     )
   }
