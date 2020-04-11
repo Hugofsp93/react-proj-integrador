@@ -1,12 +1,18 @@
 import React from 'react';
+import ButtonBack from '../Components/ButtonBackComponent'
 import institutions from '../db/institutions.json'
+import { useHistory } from "react-router-dom"
 
 export default function Favorites() {
 
+  let history = useHistory()
+
   const renderHeader = () => {
+
     return (
       <header className='header-content'>
         <h1 className="title-main">Favoritos</h1>
+        <ButtonBack onClick={() => history.push('/')} />
       </header>
     )
   }
