@@ -5,7 +5,7 @@ import { Dom } from '../Utils'
 export default function ButtonHeart(props) {
   var classStyle = [
     'favorite-icon',
-    props.active === "true" && 'active'
+    (props.active === "true" || props.active === true) && 'active'
   ];
 
   return (

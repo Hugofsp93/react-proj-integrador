@@ -6,17 +6,30 @@ import ButtonBack from '../Components/ButtonBackComponent'
 import IconText from '../Components/IconTextComponent'
 import SmallCategories from '../Components/SmallCategoriesComponent'
 import ButtonHeart from '../Components/ButtonHeartComponent'
+import { LocalStorageInstitution as Local } from '../Utils'
 
 export default function Institution(props) {
 
   const [institution, setInstitution] = useState({})
+  const [favoriteActive, setFavoriteActive] = useState(false)
 
   useEffect(() => {
     setInstitution(props.institution)
+    setFavoriteActive(isFavorite())
   }, [])
 
   const handleBack = () => {
     props.openInstitution({})
+  }
+
+  const handlerFavorite = () => {
+    const insertOrRemove = Local.insertOrRemove(institution)
+
+    setFavoriteActive(insertOrRemove.name ? true : false)
+  }
+
+  const isFavorite = () => {
+    return Local.find(props.institution.id).name ? true : false
   }
 
   const renderCategories = (categories) => {
@@ -59,7 +72,7 @@ export default function Institution(props) {
           </div>
         </section>
 
-        <ButtonHeart />
+        <ButtonHeart active={favoriteActive.toString()} onClick={handlerFavorite} />
       </header>
     )
   }
@@ -79,8 +92,8 @@ export default function Institution(props) {
         </div>
         <Line />
 
-        <h4 class="title-secundary">Itens em Falta</h4>
-        <div class="items-categories row">
+        <h4 className="title-secundary">Itens em Falta</h4>
+        <div className="items-categories row">
           {institution.categories && (renderCategories(institution.categories))}
         </div>
       </section>

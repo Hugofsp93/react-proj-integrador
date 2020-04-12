@@ -1,3 +1,4 @@
 import Dom from './domUtils';
+import LocalStorageInstitution from './localStorageUtils';
 
-export { Dom };
+export { Dom, LocalStorageInstitution };
