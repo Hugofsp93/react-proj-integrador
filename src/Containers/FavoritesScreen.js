@@ -51,14 +51,10 @@ export default function Favorites(props) {
 
   return (
     <div className="view">
-      <div className="content">
-        <div className="content--inner">
-          {renderHeader()}
-          <section class="content--institutions">
-            {renderInstitutions()}
-          </section>
-        </div>
-      </div>
+      {renderHeader()}
+      <section className="content-institutions">
+        {renderInstitutions()}
+      </section>
     </div>
   );
 }
