@@ -10,38 +10,33 @@
     "color": "#D847F3"
   },
   {
-    "name": "Higiene PEssoal",
-    "value": "higiene",
-    "color": "#C5FD39"
-  },
-  {
-    "name": "Roupa",
-    "value": "higiene",
+    "name": "Roupas",
+    "value": "clothes",
     "color": "#FEAA3A"
   },
   {
     "name": "Comida",
-    "value": "higiene",
+    "value": "food",
     "color": "#990000"
   },
   {
-    "name": "Higiene PEssoal",
-    "value": "higiene",
+    "name": "Livros",
+    "value": "books",
     "color": "#990000"
   },
   {
-    "name": "Higiene PEssoal",
-    "value": "higiene",
+    "name": "Eletrônicos",
+    "value": "eletronics",
     "color": "#990000"
   },
   {
-    "name": "Higiene PEssoal",
-    "value": "higiene",
+    "name": "Brinquedos",
+    "value": "toys",
     "color": "#990000"
   },
   {
-    "name": "Higiene PEssoal",
-    "value": "higiene",
+    "name": "Tempo",
+    "value": "time",
     "color": "#990000"
   }
 ]
