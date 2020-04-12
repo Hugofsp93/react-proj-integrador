@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Line from '../Components/LineComponent'
 
 import categoriesDb from '../db/categories.json'
-import { useHistory } from 'react-router-dom'
 import ButtonBack from '../Components/ButtonBackComponent'
+import IconText from '../Components/IconTextComponent'
 
 export default function Institution(props) {
 
   const [institution, setInstitution] = useState({})
-  let history = useHistory()
 
   useEffect(() => {
     setInstitution(props.institution)
@@ -25,7 +24,7 @@ export default function Institution(props) {
 
     if (categoriesFilters.length > 0) {
       return (
-        <div>{
+        <>{
           categoriesFilters.map((category, key) => {
             return (
               <div key={key}>
@@ -34,26 +33,42 @@ export default function Institution(props) {
             )
           })
         }
-        </div>
+        </>
       )
     } else {
-      return <i>Nada para doar :( </i>
+      return <i>Por enquanto não aceita doação </i>
     }
   }
   return (
     <div className="view">
-      <header>
-        <section>
-          <ButtonBack onClick={handleBack} />
-          <h3>{institution.name}</h3>
-          <Line />
-          <p>{institution.description}</p>
+      <header className="header-content-primary">
+        <ButtonBack onClick={handleBack} />
+        <section className="card-header">
+
+          <figure>
+            <img src={institution.profile} alt={institution.name} />
+          </figure>
+
+          <div className="card-header-content">
+            <div className="card-header-header">
+              <h3>{institution.name}</h3>
+            </div>
+            <Line />
+            <div className="card-header-footer">
+              <p className="card-header-text">{institution.description || ''}</p>
+            </div>
+          </div>
+
         </section>
       </header>
       <section className="container">
-        <p>{institution.address}</p>
+        <div className="row">
+          <IconText text={institution.address} icon="location" />
+        </div>
         <Line />
-        <p>{institution.phone && (institution.phone)}</p>
+        <div className="row">
+          <IconText text={institution.phone && (institution.phone)} icon="phone" />
+        </div>
         <Line />
         <h4>Intens em Falta</h4>
         <div>

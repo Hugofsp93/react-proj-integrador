@@ -213,7 +213,7 @@ nav a.active:before {
   flex: 1;
 }
 
-.header-content{
+.header-content-primary, .header-content{
   background-color: #9148DC;
   height: 120px;
   position: relative;
@@ -237,7 +237,7 @@ nav a.active:before {
   height: 50px;
 }
 
-.header-content::after{
+.header-content-primary::after, .header-content::after{
   position: absolute;
   content: '';
   border-radius: 50%;
@@ -300,6 +300,62 @@ nav a.active:before {
 .view{
   position: relative;
   overflow-y: auto;
+}
+
+.header-content-primary{
+  height: 200px;
+}
+
+.card-header{
+  display: flex;
+  width: 100%;
+  padding: 1em 0.5em;
+  color: #686868;
+  align-items: center;
+}
+
+.card-header figure{
+  width: 30%;
+  padding-right: 1em;
+}
+
+.card-header img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+
+.card-header-content{
+  flex: 1;
+  align-items: flex-stretch; 
+  display: flex;
+  flex-direction: column;
+  justify-self: baseline;
+}
+
+.card-header-header{
+  padding: 8px;
+  text-align: left;
+  color: #fff;
+}
+
+.card-header-footer{
+  display: flex;
+  padding: 8px;
+  color: #fff;
+}
+
+.icon-text{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-text--txt{
+  margin-left: 1em;
+}
+
+.row{
+  padding: 8px;
 }
 
 /* 
