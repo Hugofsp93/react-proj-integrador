@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { FaHeart } from "react-icons/fa"
 import Line from '../Components/LineComponent'
 
 import categoriesDb from '../db/categories.json'
 import ButtonBack from '../Components/ButtonBackComponent'
 import IconText from '../Components/IconTextComponent'
 import SmallCategories from '../Components/SmallCategoriesComponent'
+import ButtonHeart from '../Components/ButtonHeartComponent'
 
 export default function Institution(props) {
 
@@ -59,9 +59,7 @@ export default function Institution(props) {
           </div>
         </section>
 
-        <div className='favorite-icon'>
-          <FaHeart />
-        </div>
+        <ButtonHeart />
       </header>
     )
   }

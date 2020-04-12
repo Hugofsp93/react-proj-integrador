@@ -215,6 +215,7 @@ nav a.active:before {
 
 .header-content-primary, .header-content{
   background-color: #9148DC;
+  color: #9148DC;
   height: 120px;
   position: relative;
   display: flex;
@@ -226,22 +227,30 @@ nav a.active:before {
   z-index: 10;
 }
 
-.favorite-icon {
+.header-content-primary .favorite-icon, .header-content .favorite-icon{
   position: absolute;
-  bottom: -30px;
+  bottom: -25px;
+}
+
+.favorite-icon {
   background-color: white;
   border-radius: 50%;
-  font-size: 35px;
-  width: 50px;
-  color: red;
-  height: 50px;
+  font-size: 30px;
+  width: 40px;
+  color: inherit;
+  height: 40px;
+}
+
+.favorite-icon.active{
+  color: #EE457F;
 }
 
 .header-content-primary::after, .header-content::after{
   position: absolute;
   content: '';
   border-radius: 50%;
-  background-color: #9148DC;
+  background-color: inherit;
+  color: inherit;
   width: 100px;
   height: 100px;
   bottom: -40px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ButtonBack from '../Components/ButtonBackComponent'
 import institutions from '../db/institutions.json'
-import { FaHeart } from "react-icons/fa";
 import { useHistory } from "react-router-dom"
+import ButtonHeart from '../Components/ButtonHeartComponent'
 
 export default function Favorites(props) {
 
@@ -15,9 +15,7 @@ export default function Favorites(props) {
         <div style={{ position: 'absolute' }}>
           <h1 className="title-main">Favoritos</h1>
         </div>
-        <div className='favorite-icon'>
-          <FaHeart />
-        </div>
+        <ButtonHeart active="true" />
         <ButtonBack onClick={() => history.goBack()} />
       </header>
     )
