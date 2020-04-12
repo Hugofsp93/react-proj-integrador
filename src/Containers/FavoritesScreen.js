@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonBack from '../Components/ButtonBackComponent'
-import institutions from '../db/institutions.json'
 import { useHistory } from "react-router-dom"
 import ButtonHeart from '../Components/ButtonHeartComponent'
+import { LocalStorageInstitution as Local } from '../Utils'
 
 export default function Favorites(props) {
 
   let history = useHistory()
+
+  const [institutions, setInstitutions] = useState({})
+  useEffect(() => {
+    setInstitutions(Local.getAll())
+  }, [])
+
 
   const renderHeader = () => {
 
@@ -20,11 +26,17 @@ export default function Favorites(props) {
       </header>
     )
   }
-
+  const renderListEmpty = () => {
+    return (
+      <section className="list-empty">
+        <h3>Você ainda não tem <br />nenhuma insituição favorita</h3>
+      </section >
+    )
+  }
 
   const renderInstitutions = () => {
     return (
-      institutions.map((institution, key) => {
+      institutions.length > 0 && (institutions.map((institution, key) => {
         return (
           <section key={key} className="card-primary" onClick={() => props.openInstitution(institution)}>
 
@@ -46,6 +58,7 @@ export default function Favorites(props) {
           </section>
         )
       })
+      ) || renderListEmpty()
     )
   }
 
