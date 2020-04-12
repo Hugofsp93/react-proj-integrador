@@ -25,7 +25,7 @@
     "email": "teste@gmail.com"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Lar da Luluzinha",
     "address": "Rua rua asdasd aksdaksd",
     "description": "asdasdasd",
@@ -49,6 +49,6 @@
       "food",
       "toys"
     ],
-    "email": "teste@gmail.com"
+    "email": "larluluzinha@gmail.com"
   }
 ]
