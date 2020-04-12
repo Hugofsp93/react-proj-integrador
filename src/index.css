@@ -228,9 +228,9 @@ nav a.active:before {
 
 .favorite-icon {
   position: absolute;
-  margin-top: 59px;
+  bottom: -30px;
   background-color: white;
-  border-radius: 31px;
+  border-radius: 50%;
   font-size: 35px;
   width: 50px;
   color: red;

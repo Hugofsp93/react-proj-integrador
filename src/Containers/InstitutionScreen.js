@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FaHeart } from "react-icons/fa"
 import Line from '../Components/LineComponent'
 
 import categoriesDb from '../db/categories.json'
@@ -36,8 +37,9 @@ export default function Institution(props) {
       return <i>Por enquanto não aceita doação </i>
     }
   }
-  return (
-    <div className="view">
+
+  const renderHeader = () => {
+    return (
       <header className="header-content-primary">
         <ButtonBack onClick={handleBack} />
         <section className="card-header">
@@ -55,9 +57,20 @@ export default function Institution(props) {
               <p className="card-header-text">{institution.description || ''}</p>
             </div>
           </div>
-
         </section>
+
+        <div className='favorite-icon'>
+          <FaHeart />
+        </div>
       </header>
+    )
+  }
+
+  return (
+    <div className="view">
+
+      {renderHeader()}
+
       <section className="container layout-institution">
         <div className="row">
           <IconText text={institution.address} icon="location" />
