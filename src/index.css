@@ -358,6 +358,28 @@ nav a.active:before {
   padding: 8px;
 }
 
+.layout-institution .title-secundary{
+  text-align: center;
+  margin-top: .5em;
+}
+
+.small-categories{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.items-categories{
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.items-categories .small-categories:not(:first-child){
+  margin-left: 1em;
+}
+
 /* 
 @media screen and (max-width: 768px) {
   h1 {

@@ -4,6 +4,7 @@ import Line from '../Components/LineComponent'
 import categoriesDb from '../db/categories.json'
 import ButtonBack from '../Components/ButtonBackComponent'
 import IconText from '../Components/IconTextComponent'
+import SmallCategories from '../Components/SmallCategoriesComponent'
 
 export default function Institution(props) {
 
@@ -25,13 +26,9 @@ export default function Institution(props) {
     if (categoriesFilters.length > 0) {
       return (
         <>{
-          categoriesFilters.map((category, key) => {
-            return (
-              <div key={key}>
-                {category.value}
-              </div>
-            )
-          })
+          categoriesFilters.map((category, key) =>
+            <SmallCategories key={key} name={category.name} color={category.color} />
+          )
         }
         </>
       )
@@ -61,7 +58,7 @@ export default function Institution(props) {
 
         </section>
       </header>
-      <section className="container">
+      <section className="container layout-institution">
         <div className="row">
           <IconText text={institution.address} icon="location" />
         </div>
@@ -70,8 +67,9 @@ export default function Institution(props) {
           <IconText text={institution.phone && (institution.phone)} icon="phone" />
         </div>
         <Line />
-        <h4>Intens em Falta</h4>
-        <div>
+
+        <h4 class="title-secundary">Itens em Falta</h4>
+        <div class="items-categories row">
           {institution.categories && (renderCategories(institution.categories))}
         </div>
       </section>
