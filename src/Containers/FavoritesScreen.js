@@ -31,7 +31,7 @@ export default function Favorites() {
           <section key={key} className="card-primary">
 
             <figure>
-              <img src={institution.photos[0]} alt={institution.name} />
+              <img src={institution.profile} alt={institution.name} />
             </figure>
 
             <div className="card-primary-content">
