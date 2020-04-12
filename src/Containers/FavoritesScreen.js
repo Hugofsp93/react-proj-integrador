@@ -18,7 +18,7 @@ export default function Favorites() {
         <div className='favorite-icon'>
           <FaHeart />
         </div>
-        <ButtonBack onClick={() => history.push('/')} />
+        <ButtonBack onClick={() => history.goBack()} />
       </header>
     )
   }
