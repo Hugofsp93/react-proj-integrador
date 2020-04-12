@@ -176,7 +176,7 @@ nav a.active:before {
   width: 100%;
 }
 
-.card-primary-line{
+.line, .card-primary-line{
   height: 1px;
   background-color: #ccc;
   border: 0px;
