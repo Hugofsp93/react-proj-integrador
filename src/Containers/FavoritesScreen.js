@@ -4,7 +4,7 @@ import institutions from '../db/institutions.json'
 import { FaHeart } from "react-icons/fa";
 import { useHistory } from "react-router-dom"
 
-export default function Favorites() {
+export default function Favorites(props) {
 
   let history = useHistory()
 
@@ -28,7 +28,7 @@ export default function Favorites() {
     return (
       institutions.map((institution, key) => {
         return (
-          <section key={key} className="card-primary">
+          <section key={key} className="card-primary" onClick={() => props.openInstitution(institution)}>
 
             <figure>
               <img src={institution.profile} alt={institution.name} />

@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Nav from './Navigation'
 import Home from './Containers/HomeScreen'
 import Favorites from './Containers/FavoritesScreen'
 import Institution from './Containers/InstitutionScreen'
 
-function main() {
-  return (
-    <Switch>
-      <Route exact path='/' > <Home /> </Route>
-      <Route exact path="/favorites"> <Favorites /> </Route>
-      <Route exact path="/institution/:id"> <Institution /> </Route>
-    </Switch>
-  )
-}
-
 export default function App() {
+  const [institution, setInstitution] = useState({})
+
+  const openInstitution = (inst) => {
+    setInstitution(inst)
+  }
+
+  const main = () => {
+    return (
+      <Switch>
+        <Route exact path='/' >
+          <Home openInstitution={openInstitution} />
+        </Route>
+        <Route exact path="/favorites">
+          <Favorites openInstitution={openInstitution} />
+        </Route>
+      </Switch>
+    )
+  }
+
   return (
     <Router>
       <div className="app">
@@ -26,6 +35,16 @@ export default function App() {
           <Nav />
         </div>
       </div>
+
+      {institution.name && (
+        <div>
+          <div class="overlay" onClick={() => setInstitution({})}></div>
+          <div class="modal-page-content">
+            <Institution openInstitution={openInstitution} institution={institution} />
+          </div>
+        </div>
+      )}
+
     </Router>
   )
 }
