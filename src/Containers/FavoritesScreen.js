@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonBack from '../Components/ButtonBackComponent'
-import institutions from '../db/institutions.json'
-import { FaHeart } from "react-icons/fa";
 import { useHistory } from "react-router-dom"
+import ButtonHeart from '../Components/ButtonHeartComponent'
+import { LocalStorageInstitution as Local } from '../Utils'
 
 export default function Favorites(props) {
 
   let history = useHistory()
+
+  const [institutions, setInstitutions] = useState({})
+  useEffect(() => {
+    setInstitutions(Local.getAll())
+  }, [])
+
 
   const renderHeader = () => {
 
@@ -15,18 +21,22 @@ export default function Favorites(props) {
         <div style={{ position: 'absolute' }}>
           <h1 className="title-main">Favoritos</h1>
         </div>
-        <div className='favorite-icon'>
-          <FaHeart />
-        </div>
+        <ButtonHeart active="true" />
         <ButtonBack onClick={() => history.goBack()} />
       </header>
     )
   }
-
+  const renderListEmpty = () => {
+    return (
+      <section className="list-empty">
+        <h3>Você ainda não tem <br />nenhuma insituição favorita</h3>
+      </section >
+    )
+  }
 
   const renderInstitutions = () => {
     return (
-      institutions.map((institution, key) => {
+      institutions.length > 0 && (institutions.map((institution, key) => {
         return (
           <section key={key} className="card-primary" onClick={() => props.openInstitution(institution)}>
 
@@ -48,19 +58,16 @@ export default function Favorites(props) {
           </section>
         )
       })
+      ) || renderListEmpty()
     )
   }
 
   return (
     <div className="view">
-      <div className="content">
-        <div className="content--inner">
-          {renderHeader()}
-          <section class="content--institutions">
-            {renderInstitutions()}
-          </section>
-        </div>
-      </div>
+      {renderHeader()}
+      <section className="content-institutions">
+        {renderInstitutions()}
+      </section>
     </div>
   );
 }

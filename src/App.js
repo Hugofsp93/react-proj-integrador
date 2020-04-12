@@ -31,15 +31,15 @@ export default function App() {
         <section className="app--main">
           {main()}
         </section>
-        <div class="app--bottom-bar">
+        <div className="app--bottom-bar">
           <Nav />
         </div>
       </div>
 
       {institution.name && (
         <div>
-          <div class="overlay" onClick={() => setInstitution({})}></div>
-          <div class="modal-page-content">
+          <div className="overlay" onClick={() => setInstitution({})}></div>
+          <div className="modal-page-content">
             <Institution openInstitution={openInstitution} institution={institution} />
           </div>
         </div>

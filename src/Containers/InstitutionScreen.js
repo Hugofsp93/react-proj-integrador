@@ -2,20 +2,34 @@ import React, { useState, useEffect } from 'react'
 import Line from '../Components/LineComponent'
 
 import categoriesDb from '../db/categories.json'
-import { useHistory } from 'react-router-dom'
 import ButtonBack from '../Components/ButtonBackComponent'
+import IconText from '../Components/IconTextComponent'
+import SmallCategories from '../Components/SmallCategoriesComponent'
+import ButtonHeart from '../Components/ButtonHeartComponent'
+import { LocalStorageInstitution as Local } from '../Utils'
 
 export default function Institution(props) {
 
   const [institution, setInstitution] = useState({})
-  let history = useHistory()
+  const [favoriteActive, setFavoriteActive] = useState(false)
 
   useEffect(() => {
     setInstitution(props.institution)
+    setFavoriteActive(isFavorite())
   }, [])
 
   const handleBack = () => {
     props.openInstitution({})
+  }
+
+  const handlerFavorite = () => {
+    const insertOrRemove = Local.insertOrRemove(institution)
+
+    setFavoriteActive(insertOrRemove.name ? true : false)
+  }
+
+  const isFavorite = () => {
+    return Local.find(props.institution.id).name ? true : false
   }
 
   const renderCategories = (categories) => {
@@ -25,38 +39,61 @@ export default function Institution(props) {
 
     if (categoriesFilters.length > 0) {
       return (
-        <div>{
-          categoriesFilters.map((category, key) => {
-            return (
-              <div key={key}>
-                {category.value}
-              </div>
-            )
-          })
+        <>{
+          categoriesFilters.map((category, key) =>
+            <SmallCategories key={key} name={category.name} color={category.color} />
+          )
         }
-        </div>
+        </>
       )
     } else {
-      return <i>Nada para doar :( </i>
+      return <i>Por enquanto não aceita doação </i>
     }
   }
+
+  const renderHeader = () => {
+    return (
+      <header className="header-content-primary">
+        <ButtonBack onClick={handleBack} />
+        <section className="card-header">
+
+          <figure>
+            <img src={institution.profile} alt={institution.name} />
+          </figure>
+
+          <div className="card-header-content">
+            <div className="card-header-header">
+              <h3>{institution.name}</h3>
+            </div>
+            <Line />
+            <div className="card-header-footer">
+              <p className="card-header-text">{institution.description || ''}</p>
+            </div>
+          </div>
+        </section>
+
+        <ButtonHeart active={favoriteActive.toString()} onClick={handlerFavorite} />
+      </header>
+    )
+  }
+
   return (
     <div className="view">
-      <header>
-        <section>
-          <ButtonBack onClick={handleBack} />
-          <h3>{institution.name}</h3>
-          <Line />
-          <p>{institution.description}</p>
-        </section>
-      </header>
-      <section className="container">
-        <p>{institution.address}</p>
+
+      {renderHeader()}
+
+      <section className="container layout-institution">
+        <div className="row">
+          <IconText text={institution.address} icon="location" />
+        </div>
         <Line />
-        <p>{institution.phone && (institution.phone)}</p>
+        <div className="row">
+          <IconText text={institution.phone && (institution.phone)} icon="phone" />
+        </div>
         <Line />
-        <h4>Intens em Falta</h4>
-        <div>
+
+        <h4 className="title-secundary">Itens em Falta</h4>
+        <div className="items-categories row">
           {institution.categories && (renderCategories(institution.categories))}
         </div>
       </section>
