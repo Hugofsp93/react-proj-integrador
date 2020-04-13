@@ -1,47 +1,65 @@
 [
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#1890FC"
+    "color": "#1890FC",
+    "lat": "-21.805139",
+    "lng": "-49.0921639"
   },
   {
     "name": "Dinheiro",
     "value": "money",
-    "color": "#D847F3"
+    "color": "#D847F3",
+    "lat": "-21.805159",
+    "lng": "-49.0921659"
   },
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#C5FD39"
+    "color": "#C5FD39",
+    "lat": "-21.805144",
+    "lng": "-49.0921644"
   },
   {
     "name": "Roupa",
     "value": "higiene",
-    "color": "#FEAA3A"
+    "color": "#FEAA3A",
+    "lat": "-21.805141",
+    "lng": "-49.0921641"
   },
   {
     "name": "Comida",
     "value": "higiene",
-    "color": "#990000"
+    "color": "#990000",
+    "lat": "-21.805142",
+    "lng": "-49.0921642"
   },
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#990000"
+    "color": "#990000",
+    "lat": "-21.805151",
+    "lng": "-49.0921651"
   },
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#990000"
+    "color": "#990000",
+    "lat": "-21.805140",
+    "lng": "-49.0921640"
   },
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#990000"
+    "color": "#990000",
+    "lat": "-21.805170",
+    "lng": "-49.0921670"
   },
   {
-    "name": "Higiene PEssoal",
+    "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#990000"
+    "color": "#990000",
+    "lat": "-21.805129",
+    "lng": "-49.0921629"
   }
 ]

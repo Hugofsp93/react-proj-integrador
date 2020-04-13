@@ -6,10 +6,19 @@ import categories from '../db/categories.json'
 
 export default function Home() {
 
+  const setCategoryMarkers = (category) => {
+    alert(category.name)
+  }
+
   const renderListCategories = () => {
     return (
       categories.map((category, key) => {
-        return (<BigCategories name={category.name} color={category.color} key={key} />)
+        return (
+          <BigCategories
+            name={category.name}
+            color={category.color}
+            key={key}
+            onClick={() => setCategoryMarkers(category)} />)
       })
     )
   }

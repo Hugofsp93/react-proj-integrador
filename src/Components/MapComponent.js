@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import categories from '../db/categories.json'
 
 function MapComponent(props) {
 
