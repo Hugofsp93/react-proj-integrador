@@ -2,7 +2,6 @@
   "name": "adorodoar",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://jeremenichelli.github.io/react-view-transition-example",
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "gsap": "^2.0.1",

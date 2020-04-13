@@ -4,9 +4,11 @@ import Nav from './Navigation'
 import Home from './Containers/HomeScreen'
 import Favorites from './Containers/FavoritesScreen'
 import Institution from './Containers/InstitutionScreen'
+import Splash from './Containers/SplashScreen'
 
 export default function App() {
   const [institution, setInstitution] = useState({})
+  const [splashActive, setSplashActive] = useState(true)
 
   const openInstitution = (inst) => {
     setInstitution(inst)
@@ -24,27 +26,33 @@ export default function App() {
       </Switch>
     )
   }
-
-  return (
-    <Router>
-      <div className="app">
-        <section className="app--main">
-          {main()}
-        </section>
-        <div className="app--bottom-bar">
-          <Nav />
-        </div>
-      </div>
-
-      {institution.name && (
-        <div>
-          <div className="overlay" onClick={() => setInstitution({})}></div>
-          <div className="modal-page-content">
-            <Institution openInstitution={openInstitution} institution={institution} />
+  if (splashActive) {
+    setTimeout(() => {
+      setSplashActive(false)
+    }, 3000)
+    return <Splash />
+  } else {
+    return (
+      <Router>
+        <div className="app">
+          <section className="app--main">
+            {main()}
+          </section>
+          <div className="app--bottom-bar">
+            <Nav />
           </div>
         </div>
-      )}
 
-    </Router>
-  )
+        {institution.name && (
+          <div>
+            <div className="overlay" onClick={() => setInstitution({})}></div>
+            <div className="modal-page-content">
+              <Institution openInstitution={openInstitution} institution={institution} />
+            </div>
+          </div>
+        )}
+
+      </Router>
+    )
+  }
 }
