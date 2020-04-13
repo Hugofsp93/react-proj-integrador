@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonBack from '../Components/ButtonBackComponent'
-import institutions from '../db/institutions.json'
-import { FaHeart } from "react-icons/fa";
 import { useHistory } from "react-router-dom"
+import ButtonHeart from '../Components/ButtonHeartComponent'
+import { LocalStorageInstitution as Local } from '../Utils'
 
-export default function Favorites() {
+export default function Favorites(props) {
 
   let history = useHistory()
+
+  const [institutions, setInstitutions] = useState({})
+  useEffect(() => {
+    setInstitutions(Local.getAll())
+  }, [])
+
 
   const renderHeader = () => {
 
@@ -15,23 +21,28 @@ export default function Favorites() {
         <div style={{ position: 'absolute' }}>
           <h1 className="title-main">Favoritos</h1>
         </div>
-        <div className='favorite-icon'>
-          <FaHeart />
-        </div>
-        <ButtonBack onClick={() => history.push('/')} />
+        <ButtonHeart active="true" />
+        <ButtonBack onClick={() => history.goBack()} />
       </header>
     )
   }
-
+  const renderListEmpty = () => {
+    return (
+      <section className="list-empty">
+        <img src="/images/brokenHeart.svg" alt="" />
+        <h3>Você ainda não tem <br />nenhuma insituição favorita</h3>
+      </section >
+    )
+  }
 
   const renderInstitutions = () => {
     return (
-      institutions.map((institution, key) => {
+      institutions.length > 0 && (institutions.map((institution, key) => {
         return (
-          <section key={key} className="card-primary">
+          <section key={key} className="card-primary" onClick={() => props.openInstitution(institution)}>
 
             <figure>
-              <img src={institution.photos[0]} alt={institution.name} />
+              <img src={institution.profile} alt={institution.name} />
             </figure>
 
             <div className="card-primary-content">
@@ -48,19 +59,16 @@ export default function Favorites() {
           </section>
         )
       })
+      ) || renderListEmpty()
     )
   }
 
   return (
     <div className="view">
-      <div className="content">
-        <div className="content--inner">
-          {renderHeader()}
-          <section class="content--institutions">
-            {renderInstitutions()}
-          </section>
-        </div>
-      </div>
+      {renderHeader()}
+      <section className="content-institutions">
+        {renderInstitutions()}
+      </section>
     </div>
   );
 }

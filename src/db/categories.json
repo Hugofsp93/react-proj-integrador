@@ -10,54 +10,47 @@
     "name": "Dinheiro",
     "value": "money",
     "color": "#D847F3",
-    "lat": "-21.805159",
-    "lng": "-49.0921659"
-  },
-  {
-    "name": "Higiene Pessoal",
-    "value": "higiene",
-    "color": "#C5FD39",
     "lat": "-21.805144",
     "lng": "-49.0921644"
   },
   {
-    "name": "Roupa",
-    "value": "higiene",
+    "name": "Roupas",
+    "value": "clothes",
     "color": "#FEAA3A",
     "lat": "-21.805141",
     "lng": "-49.0921641"
   },
   {
     "name": "Comida",
-    "value": "higiene",
+    "value": "food",
     "color": "#990000",
     "lat": "-21.805142",
     "lng": "-49.0921642"
   },
   {
-    "name": "Higiene Pessoal",
-    "value": "higiene",
+    "name": "Livros",
+    "value": "books",
     "color": "#990000",
     "lat": "-21.805151",
     "lng": "-49.0921651"
   },
   {
-    "name": "Higiene Pessoal",
-    "value": "higiene",
+    "name": "Eletrônicos",
+    "value": "eletronics",
     "color": "#990000",
     "lat": "-21.805140",
     "lng": "-49.0921640"
   },
   {
-    "name": "Higiene Pessoal",
-    "value": "higiene",
+    "name": "Brinquedos",
+    "value": "toys",
     "color": "#990000",
     "lat": "-21.805170",
     "lng": "-49.0921670"
   },
   {
-    "name": "Higiene Pessoal",
-    "value": "higiene",
+    "name": "Tempo",
+    "value": "time",
     "color": "#990000",
     "lat": "-21.805129",
     "lng": "-49.0921629"

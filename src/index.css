@@ -176,7 +176,7 @@ nav a.active:before {
   width: 100%;
 }
 
-.card-primary-line{
+.line, .card-primary-line{
   height: 1px;
   background-color: #ccc;
   border: 0px;
@@ -213,8 +213,9 @@ nav a.active:before {
   flex: 1;
 }
 
-.header-content{
+.header-content-primary, .header-content{
   background-color: #9148DC;
+  color: #9148DC;
   height: 120px;
   position: relative;
   display: flex;
@@ -226,22 +227,30 @@ nav a.active:before {
   z-index: 10;
 }
 
-.favorite-icon {
+.header-content-primary .favorite-icon, .header-content .favorite-icon{
   position: absolute;
-  margin-top: 59px;
-  background-color: white;
-  border-radius: 31px;
-  font-size: 35px;
-  width: 50px;
-  color: red;
-  height: 50px;
+  bottom: -25px;
 }
 
-.header-content::after{
+.favorite-icon {
+  background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  width: 40px;
+  color: inherit;
+  height: 40px;
+}
+
+.favorite-icon.active{
+  color: #EE457F;
+}
+
+.header-content-primary::after, .header-content::after{
   position: absolute;
   content: '';
   border-radius: 50%;
-  background-color: #9148DC;
+  background-color: inherit;
+  color: inherit;
   width: 100px;
   height: 100px;
   bottom: -40px;
@@ -272,6 +281,161 @@ nav a.active:before {
   transform: scale(0.9);
 }
 
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000dd;
+  z-index: 99;
+}
+
+.modal-page-content{
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.container{
+  position: relative;
+  padding: .5em;
+}
+
+.view{
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.header-content-primary{
+  height: 200px;
+}
+
+.card-header{
+  display: flex;
+  width: 100%;
+  padding: 1em 0.5em;
+  color: #686868;
+  align-items: center;
+}
+
+.card-header figure{
+  width: 30%;
+  padding-right: 1em;
+}
+
+.card-header img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+
+.card-header-content{
+  flex: 1;
+  align-items: flex-stretch; 
+  display: flex;
+  flex-direction: column;
+  justify-self: baseline;
+}
+
+.card-header-header{
+  padding: 8px;
+  text-align: left;
+  color: #fff;
+}
+
+.card-header-footer{
+  display: flex;
+  padding: 8px;
+  color: #fff;
+}
+
+.icon-text{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-text--txt{
+  margin-left: 1em;
+}
+
+.row{
+  padding: 8px;
+}
+
+.layout-institution .title-secundary{
+  text-align: center;
+  margin-top: .5em;
+}
+
+.small-categories{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.items-categories{
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.items-categories .small-categories:not(:first-child){
+  margin-left: 1em;
+}
+
+.list-empty{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.list-empty img{
+  margin-top: 30%;
+  width: 50%;
+}
+
+.splash{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-end;
+  align-content: center;
+  text-align: center;
+  background-color: #874CD4;
+  color: #fff;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.splash--image{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.splash--image img{
+  width: 50%;
+}
+
+.splash--version{
+  padding: 1em;
+  align-self: flex-start;
+}
 /* 
 @media screen and (max-width: 768px) {
   h1 {
@@ -313,6 +477,7 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
+position: relative;
 
 @media screen and (max-width: 768px) {
   nav a {

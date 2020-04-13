@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ButtonBack() {
+export default function ButtonBack(props) {
   return (
-    <button className="button-back">
+    <button className="button-back" {...props}>
       X
     </button>
   )

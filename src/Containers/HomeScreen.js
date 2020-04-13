@@ -24,14 +24,12 @@ export default function Home() {
   }
 
   return (
-    <div className="view" >
-      <div className="content">
-        <div className="content--inner">
-          <Map />
-          <footer className='content--categories-on-map'>
-            {renderListCategories()}
-          </footer>
-        </div>
+    <div className="content">
+      <div className="content--inner">
+        <Map />
+        <footer className='content--categories-on-map'>
+          {renderListCategories()}
+        </footer>
       </div>
     </div>
   )
