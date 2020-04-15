@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 import Map from '../Components/MapComponent'
 import BigCategories from '../Components/BigCategoriesComponent'
 import categories from '../db/categories.json'
+import institutions from '../db/institutions.json'
 
-export default function Home() {
+export default function Home(props) {
+
+  const [places, setPlaces] = useState([])
 
   const setCategoryMarkers = (category) => {
-    alert(category.name)
+    const filters = institutions.filter(institution =>
+      institution.categories.includes(category.value)
+    )
+    setPlaces(filters)
   }
 
   const renderListCategories = () => {
@@ -26,7 +32,7 @@ export default function Home() {
   return (
     <div className="content">
       <div className="content--inner">
-        <Map />
+        <Map places={places} openInstitution={props.openInstitution} />
         <footer className='content--categories-on-map'>
           {renderListCategories()}
         </footer>
