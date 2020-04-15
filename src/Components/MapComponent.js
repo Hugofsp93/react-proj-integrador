@@ -5,7 +5,7 @@ import { fitBounds } from 'google-map-react/utils';
 
 // components:
 import Marker from '../Components/MarkerComponent';
-// import mapStyle from '../assets/mapStyle.json'
+import mapStyle from '../assets/mapStyle.json'
 
 export default function MapComponent(props) {
 
@@ -46,7 +46,8 @@ export default function MapComponent(props) {
       mapTypeControlOptions: {
         position: maps.ControlPosition.TOP_RIGHT
       },
-      mapTypeControl: false
+      mapTypeControl: false,
+      styles: mapStyle
     }
   }
 
