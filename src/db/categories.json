@@ -2,57 +2,41 @@
   {
     "name": "Higiene Pessoal",
     "value": "higiene",
-    "color": "#1890FC",
-    "lat": "-21.805139",
-    "lng": "-49.0921639"
+    "color": "#1890FC"
   },
   {
     "name": "Dinheiro",
     "value": "money",
-    "color": "#D847F3",
-    "lat": "-21.805144",
-    "lng": "-49.0921644"
+    "color": "#D847F3"
   },
   {
     "name": "Roupas",
     "value": "clothes",
-    "color": "#FEAA3A",
-    "lat": "-21.805141",
-    "lng": "-49.0921641"
+    "color": "#FEAA3A"
   },
   {
     "name": "Comida",
     "value": "food",
-    "color": "#990000",
-    "lat": "-21.805142",
-    "lng": "-49.0921642"
+    "color": "#990000"
   },
   {
     "name": "Livros",
     "value": "books",
-    "color": "#990000",
-    "lat": "-21.805151",
-    "lng": "-49.0921651"
+    "color": "#990000"
   },
   {
     "name": "Eletrônicos",
     "value": "eletronics",
-    "color": "#990000",
-    "lat": "-21.805140",
-    "lng": "-49.0921640"
+    "color": "#990000"
   },
   {
     "name": "Brinquedos",
     "value": "toys",
-    "color": "#990000",
-    "lat": "-21.805170",
-    "lng": "-49.0921670"
+    "color": "#990000"
   },
   {
     "name": "Tempo",
     "value": "time",
-    "color": "#990000",
-    "lat": "-21.805129",
-    "lng": "-49.0921629"
+    "color": "#990000"
   }
 ]
