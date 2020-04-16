@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-proj-integrador/static/css/main.f168f890.chunk.css",
-    "main.js": "/react-proj-integrador/static/js/main.8cd6f059.chunk.js",
-    "main.js.map": "/react-proj-integrador/static/js/main.8cd6f059.chunk.js.map",
+    "main.js": "/react-proj-integrador/static/js/main.c2a877f6.chunk.js",
+    "main.js.map": "/react-proj-integrador/static/js/main.c2a877f6.chunk.js.map",
     "runtime-main.js": "/react-proj-integrador/static/js/runtime-main.78339fe6.js",
     "runtime-main.js.map": "/react-proj-integrador/static/js/runtime-main.78339fe6.js.map",
     "static/js/2.e6fa1c76.chunk.js": "/react-proj-integrador/static/js/2.e6fa1c76.chunk.js",
     "static/js/2.e6fa1c76.chunk.js.map": "/react-proj-integrador/static/js/2.e6fa1c76.chunk.js.map",
     "index.html": "/react-proj-integrador/index.html",
-    "precache-manifest.aef81f5dd8923ad5a19caab012283528.js": "/react-proj-integrador/precache-manifest.aef81f5dd8923ad5a19caab012283528.js",
+    "precache-manifest.4eabdeb03708db9fc3f219aa7912b84c.js": "/react-proj-integrador/precache-manifest.4eabdeb03708db9fc3f219aa7912b84c.js",
     "service-worker.js": "/react-proj-integrador/service-worker.js",
     "static/css/main.f168f890.chunk.css.map": "/react-proj-integrador/static/css/main.f168f890.chunk.css.map",
     "static/js/2.e6fa1c76.chunk.js.LICENSE.txt": "/react-proj-integrador/static/js/2.e6fa1c76.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.78339fe6.js",
     "static/js/2.e6fa1c76.chunk.js",
     "static/css/main.f168f890.chunk.css",
-    "static/js/main.8cd6f059.chunk.js"
+    "static/js/main.c2a877f6.chunk.js"
   ]
 }
