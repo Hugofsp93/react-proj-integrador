@@ -50,7 +50,7 @@ h2 {
 
 .app--bottom-bar{
   background-color: #874CD4;
-  min-height: 100px;
+  height: auto;
 }
 
 nav {
@@ -59,7 +59,7 @@ nav {
   justify-content: space-evenly;
   margin: 0 auto;
   opacity: 0;
-  padding: 3em;
+  padding: 1em;
   overflow-x: auto;
 }
 
@@ -76,14 +76,12 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-nav {
-  animation: nav 0.2s ease-in-out forwards;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  opacity: 0;
-  padding: 3em;
-  overflow-x: auto;
+
+nav img{
+  display: block;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 4px;
 }
 
 
@@ -97,7 +95,7 @@ nav {
   to { opacity: 1; transform: translate3d(0, 0, 0) }
 }
 
-nav a:before {
+/* nav a:before {
   border-radius: 50%;
   content: '';
   background-color: #E5CC54;
@@ -117,7 +115,7 @@ nav a.active:before {
 
 nav a.active:before {
   animation: navdot 0.25s ease-in-out forwards 0.25s;
-}
+} */
 
 @keyframes navdot {
   from { opacity: 0; }
