@@ -5,6 +5,7 @@ import { Images } from '../Utils';
 const routes = [
   { to: '/', label: 'Lista', icon: 'list' },
   { to: '/favorites', label: 'Favoritos', icon: 'fav' },
+  { to: '/profile', label: 'Perfil', icon: 'profile' },
 ]
 
 export default function Nav() {

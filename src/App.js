@@ -4,6 +4,7 @@ import Nav from './Navigation'
 import Home from './Containers/HomeScreen'
 import Favorites from './Containers/FavoritesScreen'
 import Institution from './Containers/InstitutionScreen'
+import Profile from './Containers/ProfileScreen'
 import Splash from './Containers/SplashScreen'
 
 export default function App() {
@@ -22,6 +23,9 @@ export default function App() {
         </Route>
         <Route exact path="/favorites">
           <Favorites openInstitution={openInstitution} />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
         </Route>
       </Switch>
     )
@@ -46,7 +50,7 @@ export default function App() {
         {institution.name && (
           <div>
             <div className="overlay" onClick={() => setInstitution({})}></div>
-            <div className="modal-page-content">
+            <div className="modal-page-content" className="">
               <Institution openInstitution={openInstitution} institution={institution} />
             </div>
           </div>
