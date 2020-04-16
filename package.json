@@ -2,6 +2,7 @@
   "name": "adorodoar",
   "version": "0.2.0",
   "private": true,
+  "homepage": "https://hugofsp93.github.io/react-proj-integrador/",
   "dependencies": {
     "google-map-react": "^1.1.7",
     "gsap": "^2.0.1",
@@ -20,7 +21,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.2.0"
   },
   "browserslist": {
     "production": [
