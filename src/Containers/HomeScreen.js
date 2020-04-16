@@ -7,8 +7,9 @@ import institutions from '../db/institutions.json'
 
 export default function Home(props) {
 
-  const [places, setPlaces] = useState([])
+  const [places, setPlaces] = useState(institutions)
   const [category, setCategory] = useState(null)
+  const [categoryActive, setCategoryActive] = useState(null)
 
   const setCategoryMarkers = (category) => {
     const filters = institutions.filter(institution =>
@@ -16,6 +17,7 @@ export default function Home(props) {
     )
     setCategory(category)
     setPlaces(filters)
+    setCategoryActive(category.value)
   }
 
   const renderListCategories = () => {
@@ -23,9 +25,9 @@ export default function Home(props) {
       categories.map((category, key) => {
         return (
           <BigCategories
-            name={category.name}
-            color={category.color}
+            category={category}
             key={key}
+            active={categoryActive === category.value}
             onClick={() => setCategoryMarkers(category)} />)
       })
     )

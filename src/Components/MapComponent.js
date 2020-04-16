@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { fitBounds } from 'google-map-react/utils';
 
+import categories from '../db/categories.json'
+
 // components:
 import Marker from '../Components/MarkerComponent';
 import mapStyle from '../assets/mapStyle.json'
@@ -18,7 +20,6 @@ export default function MapComponent(props) {
   const [googlemaps, setGooglemaps] = useState(null)
 
   useEffect(function () {
-    getGeoLocation()
     setPlaces(props.places)
     setCategory(props.category)
     handlerPlaces()
@@ -33,7 +34,7 @@ export default function MapComponent(props) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {
-          setCurrentLocation({
+          setCenter({
             lat: position.coords.latitude,
             lng: position.coords.longitude
           })
@@ -91,7 +92,13 @@ export default function MapComponent(props) {
     }
   }
 
+  const returnFirstCategory = (institution) => {
+    const firstCategory = institution.categories[0]
+    return categories.find((place) => place.value === firstCategory)
+  }
+
   const apiIsLoaded = (map, maps, places) => {
+    getGeoLocation()
     setMaps(map)
     setGooglemaps(maps)
   };
@@ -103,7 +110,7 @@ export default function MapComponent(props) {
         lat={place.location.lat}
         lng={place.location.lng}
         text="My Marker"
-        color={category.color}
+        color={category && (category.color) || returnFirstCategory(institutions[0]).color}
         onClick={() => handlerMarker(place)}
       />
     )
