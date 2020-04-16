@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Dom } from '../Utils'
+import React from 'react'
+import { Dom, Images } from '../Utils'
 
 export default function BigCategoriesComponent(props) {
   const { name, value, color } = props.category
 
-  const icon = `/images/ic_${value}.svg`
+  const icon = Images.path(`ic_${value}.svg`)
 
   var styles = [
     'big-categories',
