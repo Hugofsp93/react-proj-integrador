@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "google-maps-react": "^2.0.2",
+    "google-map-react": "^1.1.7",
     "gsap": "^2.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
