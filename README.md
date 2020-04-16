@@ -1,6 +1,13 @@
-# React view transitions example
+# Adorodoar 
 
-Web application to show case custom animations per route in React projects.
+Estamos desenvolvendo um aplicativo para ajudar pessoas de 18 a 29 anos que desejam fazer doações, as quais sentem dificuldades para encontrar instituições confiáveis.
 
-The project was created using [Create React App](https://github.com/facebook/create-react-app), check out its documentation to learn how to run the project locally.
+Acesso ao projeto: [Link do App](https://hugofsp93.github.io/react-proj-integrador/)
 
+
+## libs utilizadas
+- react
+- react-router-dom
+- react-icons
+- google-map-react
+- gh-pages
