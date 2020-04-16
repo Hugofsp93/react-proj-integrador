@@ -12,31 +12,31 @@
   {
     "name": "Roupas",
     "value": "clothes",
-    "color": "#FEAA3A"
+    "color": "#e86db4"
   },
   {
     "name": "Comida",
     "value": "food",
-    "color": "#990000"
+    "color": "#E87A2A"
   },
   {
     "name": "Livros",
     "value": "books",
-    "color": "#990000"
+    "color": "#54FF7F"
   },
   {
     "name": "Eletrônicos",
     "value": "eletronics",
-    "color": "#990000"
+    "color": "#7F21FF"
   },
   {
     "name": "Brinquedos",
     "value": "toys",
-    "color": "#990000"
+    "color": "#FF3B47"
   },
   {
     "name": "Tempo",
     "value": "time",
-    "color": "#990000"
+    "color": "#21FFBA"
   }
 ]
