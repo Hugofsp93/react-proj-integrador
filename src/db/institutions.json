@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "name": "Menino Jesus",
-    "address": "Rua rua asdasd aksdaksd",
+    "name": "Instituição de Caridade Lar Paulo de Tarso",
+    "address": ", R. Jerônimo Heráclito, 479 - Ipsep, Recife - PE, 51350-310",
     "description": "asdasdasd",
     "phone": [
-      "92324234",
-      "234234"
+      " (81) 3471-0919",
+      ""
     ],
     "location": {
-      "lat": -8.0419417,
-      "lng": -34.939636
+      "lat": -8.109136,
+      "lng": -34.923654
     },
     "profile": "https://dummyimage.com/120x120/990000/fff",
     "photos": [
@@ -19,23 +19,24 @@
       "https://dummyimage.com/400x400/000099/fff"
     ],
     "categories": [
+      "hygiene",
       "money",
       "food"
     ],
-    "email": "teste@gmail.com"
+    "email": "iclarpaulodetarso.org.br"
   },
   {
     "id": 2,
-    "name": "Lar da Luluzinha",
-    "address": "Rua rua asdasd aksdaksd",
+    "name": "Instituição Filhas de Maria Servas da Caridade",
+    "address": "R. José de Alencar, 611 - Boa Vista, Recife - PE, 50070-030",
     "description": "asdasdasd",
     "phone": [
-      "92324234",
-      "234234"
+      "(81) 3222-6698",
+      ""
     ],
     "location": {
-      "lat": -8.058329,
-      "lng": -34.885687
+      "lat": -8.109046,
+      "lng": -34.923698
     },
     "profile": "https://dummyimage.com/120x120/eee/000",
     "photos": [
@@ -47,8 +48,224 @@
       "money",
       "time",
       "food",
+      "toys",
+      "electronic"
+    ],
+    "email": ""
+  },
+  {
+    "id": 3,
+    "name": "Transforma Recife",
+    "address": " Cais do Apolo, 925 - Recife, PE, 50030-903",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 3355-3739",
+      ""
+    ],
+    "location": {
+      "lat": -8.051401,
+      "lng": -34.872300
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "books",
+      "money",
+      "hygiene"
+    ],
+    "email": "www.transformarecife.com.br"
+  },
+  {
+    "id": 4,
+    "name": "Lar Espírita Unidos Na Caridade",
+    "address": " R. Costa Maia, 40 - Cordeiro, Recife - PE, 50711-360",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 3355-3739",
+      ""
+    ],
+    "location": {
+      "lat": -8.041772,
+      "lng": -34.925388
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "toys",
+      "electronic",
+      "bookss"
+    ],
+    "email": ""
+  },
+  {
+    "id": 5,
+    "name": "GAC Grupo de Ajuda a Criança Carente com Câncer",
+    "address": "R. Arnóbio Marquês, 310 - Santo Amaro, Recife - PE, 50100-130",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 98517-2498",
+      "(81) 3423-7633"
+    ],
+    "location": {
+      "lat": -8.040405,
+      "lng": -34.886850
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "clothes",
+      "eletronics",
+      "food",
       "toys"
     ],
-    "email": "larluluzinha@gmail.com"
+    "email": "gac@gac.org.br"
+  },
+  {
+    "id": 6,
+    "name": "Projeto Casa da Criança",
+    "address": "Rua Dr. Raul Lafayette, 191 - Sl 703 - Boa Viagem, Recife - PE, 51021-220",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 3467-9968",
+      ""
+    ],
+    "location": {
+      "lat": -8.117041,
+      "lng": -34.902282
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "money",
+      "time",
+      "books",
+      "clothes"
+    ],
+    "email": ""
+  },
+  {
+    "id": 7,
+    "name": "Centro Espírita Luz Esperança Caridade-CELEC",
+    "address": "R. Amaro Gomes Poroca, 400 - Várzea, Recife - PE, 50741-530",
+    "description": "asdasdasd",
+    "phone": [
+      " (81) 3271-1054",
+      ""
+    ],
+    "location": {
+      "lat": -8.043935,
+      "lng": -34.954127
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "money",
+      "time",
+      "food",
+      "toys",
+      "clothes",
+      "books"
+    ],
+    "email": ""
+  },
+  {
+    "id": 8,
+    "name": "Grupo Espírita Regeneração",
+    "address": "R. Onze de Fevereiro, 40 - Torrões, Recife - PE, 50640-340",
+    "description": "asdasdasd",
+    "phone": [
+      " (81) 98558-2969",
+      ""
+    ],
+    "location": {
+      "lat": -8.058093,
+      "lng": -34.931659
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "books",
+      "time"
+    ],
+    "email": ""
+  },
+  {
+    "id": 9,
+    "name": "AJEM-Abrigo Jesus Menino",
+    "address": "Rua da Esperança, 376 - Barro, Recife - PE, 50900-100",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 3455-1827",
+      ""
+    ],
+    "location": {
+      "lat": -8.091335,
+      "lng": -34.942115
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "money",
+      "food",
+      "toys"
+    ],
+    "email": "abrigojesusmenino@gmail.com"
+  },
+  {
+    "id": 10,
+    "name": "ASSOCIAÇÃO LAR DO NENEN",
+    "address": "R. Menezes Drumond, 284 - Madalena, Recife - PE, 50610-320",
+    "description": "asdasdasd",
+    "phone": [
+      "(81) 3227-2762",
+      ""
+    ],
+    "location": {
+      "lat": -8.050521,
+      "lng": -34.910797
+    },
+    "profile": "https://dummyimage.com/120x120/eee/000",
+    "photos": [
+      "https://dummyimage.com/400x400/222/fff",
+      "https://dummyimage.com/400x400/444B53/fff",
+      "https://dummyimage.com/400x400/EAF8E1/fff"
+    ],
+    "categories": [
+      "money",
+      "time",
+      "toys",
+      "books",
+      "eletronics",
+      "clothes"
+    ],
+    "email": "lardonenen@veloxmail.com.br"
   }
 ]
