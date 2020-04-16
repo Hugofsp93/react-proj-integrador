@@ -41,7 +41,7 @@ export default function Institution(props) {
       return (
         <>{
           categoriesFilters.map((category, key) =>
-            <SmallCategories key={key} name={category.name} color={category.color} />
+            <SmallCategories key={key} value={category.value} color={category.color} />
           )
         }
         </>
