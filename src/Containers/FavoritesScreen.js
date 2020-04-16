@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ButtonBack from '../Components/ButtonBackComponent'
 import { useHistory } from "react-router-dom"
 import ButtonHeart from '../Components/ButtonHeartComponent'
-import { LocalStorageInstitution as Local } from '../Utils'
+import { LocalStorageInstitution as Local, Images } from '../Utils'
 
 export default function Favorites(props) {
 
@@ -29,7 +29,7 @@ export default function Favorites(props) {
   const renderListEmpty = () => {
     return (
       <section className="list-empty">
-        <img src="/images/brokenHeart.svg" alt="" />
+        <img src={Images.path('brokenHeart.svg')} alt="" />
         <h3>Você ainda não tem <br />nenhuma insituição favorita</h3>
       </section >
     )
