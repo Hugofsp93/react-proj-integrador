@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Higiene Pessoal",
+    "value": "hygiene",
+    "color": "#1890FC"
+  },
+  {
+    "name": "Dinheiro",
+    "value": "money",
+    "color": "#D847F3"
+  },
+  {
+    "name": "Roupas",
+    "value": "clothes",
+    "color": "#e86db4"
+  },
+  {
+    "name": "Comida",
+    "value": "food",
+    "color": "#E87A2A"
+  },
+  {
+    "name": "Livros",
+    "value": "books",
+    "color": "#54FF7F"
+  },
+  {
+    "name": "Eletrônicos",
+    "value": "eletronics",
+    "color": "#7F21FF"
+  },
+  {
+    "name": "Brinquedos",
+    "value": "toys",
+    "color": "#FF3B47"
+  },
+  {
+    "name": "Tempo",
+    "value": "time",
+    "color": "#21FFBA"
+  }
+]
