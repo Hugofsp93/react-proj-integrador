@@ -436,6 +436,29 @@ nav a.active:before {
   padding: 1em;
   align-self: flex-start;
 }
+
+.marker-places{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  user-select: none;
+}
+
+.marker-places::before{
+  position: absolute;
+  content: '';
+  top: -4px;
+  left: -4px;
+  width: 30px;
+  height: 30px;
+  border-radius: inherit;
+  background-color: inherit;
+  opacity: 0.5;
+}
+
 /* 
 @media screen and (max-width: 768px) {
   h1 {

@@ -11,6 +11,7 @@ export default function MapComponent(props) {
 
   const [currentLocation, setCurrentLocation] = useState({ lat: -21.805149, lng: -49.0921657 })
   const [places, setPlaces] = useState(props.places || [])
+  const [category, setCategory] = useState(props.category)
   const [center, setCenter] = useState({ lat: -21.805149, lng: -49.0921657 })
   const [zoom, setZoom] = useState(11)
   const [map, setMaps] = useState(null)
@@ -19,8 +20,9 @@ export default function MapComponent(props) {
   useEffect(function () {
     getGeoLocation()
     setPlaces(props.places)
+    setCategory(props.category)
     handlerPlaces()
-  }, [props.places, currentLocation, map, googlemaps])
+  }, [props.places, props.category])
 
   function handlerPlaces() {
     if (props.places !== places)
@@ -101,6 +103,7 @@ export default function MapComponent(props) {
         lat={place.location.lat}
         lng={place.location.lng}
         text="My Marker"
+        color={category.color}
         onClick={() => handlerMarker(place)}
       />
     )

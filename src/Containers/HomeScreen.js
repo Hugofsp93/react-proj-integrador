@@ -8,11 +8,13 @@ import institutions from '../db/institutions.json'
 export default function Home(props) {
 
   const [places, setPlaces] = useState([])
+  const [category, setCategory] = useState(null)
 
   const setCategoryMarkers = (category) => {
     const filters = institutions.filter(institution =>
       institution.categories.includes(category.value)
     )
+    setCategory(category)
     setPlaces(filters)
   }
 
@@ -32,7 +34,7 @@ export default function Home(props) {
   return (
     <div className="content">
       <div className="content--inner">
-        <Map places={places} openInstitution={props.openInstitution} />
+        <Map places={places} openInstitution={props.openInstitution} category={category} />
         <footer className='content--categories-on-map'>
           {renderListCategories()}
         </footer>

@@ -11,7 +11,6 @@ export default function App() {
   const [splashActive, setSplashActive] = useState(true)
 
   const openInstitution = (inst) => {
-    console.log('open')
     setInstitution(inst)
   }
 
