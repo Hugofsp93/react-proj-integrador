@@ -5,7 +5,7 @@
   "homepage": "https://hugofsp93.github.io/react-proj-integrador/",
   "dependencies": {
     "google-map-react": "^1.1.7",
-    "gsap": "^2.0.1",
+    "gsap": "^3.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.9.0",
